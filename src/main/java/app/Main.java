@@ -51,7 +51,7 @@ public class Main {
         System.out.println("====== Output (inheritIO = false)");
 
         System.out.println("--- Docker process");
-        output = runProcess(null, false, "docker", "run", "--rm", "alpine", "sh", "-c", "whoami");
+        output = runProcess(null, false, "docker", "run", "--rm", "alpine", "sh", "-c", "echo hello");
 
         System.out.println("--- Java process");
         System.out.println(output);
@@ -59,7 +59,7 @@ public class Main {
         System.out.println("====== Output (inheritIO = true)");
 
         System.out.println("--- Docker process");
-        output = runProcess(null, true, "docker", "run", "--rm", "alpine", "sh", "-c", "whoami");
+        output = runProcess(null, true, "docker", "run", "--rm", "alpine", "sh", "-c", "echo hello");
 
         System.out.println("--- Java process");
         System.out.println(output);
