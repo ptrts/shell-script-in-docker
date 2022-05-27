@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+group 'we'
+
+repositories {
+    mavenCentral()
+}
+
+task('printClasspath') {
+    doFirst {
+        println(sourceSets.main.runtimeClasspath.asPath)
+    }
+}
